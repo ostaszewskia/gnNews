@@ -82,7 +82,3 @@ export const MiddleContainer = styled(Box)(({ theme }) => ({
     overflow: "visible",
   },
 }));
-
-export const ContentContainer = styled(Box)(({ theme }) => ({
-  marginTop: "2rem",
-}));

@@ -29,11 +29,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { Colors } from "../helper/colors.js";
 import { countArticles } from "../features/countArticles/countArticlesSlice.js";
 import { TitleContainer, TitleText } from "../theme/styled.js";
+import { useTranslation } from "react-i18next";
 
 const API_KEY = "ca44286c27dc440ebccc689658b39469";
 
 const Canvas = () => {
   const { countryName } = useParams();
+  const { t } = useTranslation();
 
   const isList = useSelector((state) => state.isList.value);
   const dispatch = useDispatch();
@@ -81,10 +83,10 @@ const Canvas = () => {
       {placeholder ? (
         <TitleContainer>
           <TitleText variant="h1" sx={{ display: { xs: "none", md: "block" } }}>
-            Witamy w gnNews
+          {t('canvas.noArticles')}
           </TitleText>
           <TitleText variant="h3" sx={{ display: { sm: "block", md: "none" } }}>
-            Witamy w gnNews
+          {t('canvas.noArticles')}
           </TitleText>
         </TitleContainer>
       ) : isList ? (

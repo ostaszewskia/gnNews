@@ -1,5 +1,3 @@
-import { Box, Typography } from "@mui/material";
-import { textAlign } from "@mui/system";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { TitleContainer, TitleText } from "../theme/styled";
